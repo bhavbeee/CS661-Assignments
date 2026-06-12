@@ -121,7 +121,7 @@ def main():
     args = parser.parse_args()
 
     # assignment says possible range is -1438 to 630
-    if not (-1438 < args.isovalue < 630):
+    if not (-1438 <= args.isovalue <= 630):
         print(f"Warning: Isovalue {args.isovalue} is outside the dataset range (-1438, 630).")
 
     if not os.path.exists(args.input):
